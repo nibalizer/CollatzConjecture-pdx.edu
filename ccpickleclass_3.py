@@ -67,12 +67,13 @@ while i < end:
 #	highwater.append(y)
 #	blank.append(i)
 	i += 1
-x = Collatz(start, end, lengths, highwater, x)
+legos = []
+x = Collatz(start, end, logos, highwater, x)
 
 title_ = "The longest run was %d, the number was %d" % (x.lengthhighwater, x.highwater)
 print title_
-#picklefile = open(name, 'w')
-#pickle.dump(x, picklefile)
+picklefile = open(name, 'w')
+pickle.dump(x, picklefile)
 print time.ctime()
 endtime = time.time()
 totaltime = endtime - starttime
